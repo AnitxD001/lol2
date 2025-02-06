@@ -125,65 +125,162 @@
             color: var(--link-color);
         }
         
-        /* Navigation links update */
-        .nav-links li a {
-            font-family: 'Poppins', sans-serif;
-            color: var(--link-color);
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
+        /* Navigation Styles */
+        .nav-links {
             display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-end;
             align-items: center;
-            gap: 5px;
         }
-        
-        .nav-links li a i {
-            font-size: 0.9rem;
+
+        .nav-links li {
+            list-style: none;
         }
-        
-        .nav-links li a:hover,
+
+        .nav-links li a {
+            color: #00e5ff;
+            font-size: 1.2rem;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a span {
+            display: none;
+        }
+
+        .nav-links li a:hover {
+            background-color: rgba(0, 229, 255, 0.1);
+        }
+
         .nav-links li a.active {
-            color: var(--primary-color);
+            background-color: rgba(0, 229, 255, 0.2);
         }
-        
-        .nav-links li a::after {
-            content: '';
+
+        /* Responsive Navigation */
+        @media screen and (min-width: 1024px) {
+            .nav-links {
+                gap: 20px;
+            }
+
+            .nav-links li a span {
+                display: inline;
+                margin-left: 5px;
+            }
+
+            .dropdown {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 1023px) and (min-width: 768px) {
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links li a {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media screen and (max-width: 767px) {
+            .nav-links {
+                display: none;
+            }
+
+            .dropdown {
+                display: block;
+            }
+        }
+
+        /* Dropdown styles remain the same */
+        .dropbtn {
+            background-color: transparent;
+            color: #00e5ff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px solid #00e5ff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .dropbtn:hover {
+            background-color: #00e5ff;
+            color: #000000;
+        }
+
+        .dropdown {
+            position: relative;
+            display: none;
+        }
+
+        .dropdown-content {
+            display: none;
             position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            left: 0;
-            bottom: -5px;
-            transition: width 0.3s;
+            right: 0;
+            top: 100%;
+            background-color: #000000;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,229,255,0.2);
+            border: 1px solid #00e5ff;
+            border-radius: 5px;
+            z-index: 1000;
         }
-        
-        .nav-links li a:hover::after {
-            width: 100%;
+
+        .dropdown-content a {
+            color: #00e5ff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
         }
-        
-        .nav-links li a.active {
-            color: var(--primary-color);
+
+        .dropdown-content a:hover {
+            background-color: #00e5ff;
+            color: #000000;
         }
-        
-        .nav-links li a.active::after {
-            width: 100%;
+
+        .show {
+            display: block;
+        }
+
+        @media screen and (max-width: 768px) {
+            .dropbtn {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Updated Navigation HTML -->
     <nav>
         <div class="nav-content">
             <div class="logo">
                 <a href="index.html">my Portfolio</a>
             </div>
+            <div class="dropdown">
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="index.html"><i class="fas fa-home"></i></a>
+                    <a href="about.html"><i class="fas fa-user"></i></a>
+                    <a href="projects.html"><i class="fas fa-code"></i></a>
+                    <a href="films.html"><i class="fas fa-film"></i></a>
+                    <a href="research.html"><i class="fas fa-flask"></i></a>
+                    <a href="blog.html"><i class="fas fa-blog"></i></a>
+                    <a href="papers.html"><i class="fas fa-scroll"></i></a>
+                </div>
+            </div>
             <ul class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
-                <li><a href="films.html"><i class="fas fa-film"></i> Films</a></li>
-                <li><a href="research.html" class="active"><i class="fas fa-flask"></i> Experience</a></li>
-                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
-                <li><a href="papers.html"><i class="fas fa-scroll"></i> Papers</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i><span>About</span></a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i><span>Projects</span></a></li>
+                <li><a href="films.html"><i class="fas fa-film"></i><span>Films</span></a></li>
+                <li><a href="research.html" class="active"><i class="fas fa-flask"></i><span>Experience</span></a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i><span>Blog</span></a></li>
+                <li><a href="papers.html"><i class="fas fa-scroll"></i><span>Papers</span></a></li>
             </ul>
         </div>
     </nav>
@@ -233,5 +330,40 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropBtn = document.querySelector('.dropbtn');
+            const dropdownContent = document.querySelector('.dropdown-content');
+            
+            // Toggle dropdown when button is clicked
+            dropBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownContent.classList.toggle('show');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.matches('.dropbtn')) {
+                    if (dropdownContent.classList.contains('show')) {
+                        dropdownContent.classList.remove('show');
+                    }
+                }
+            });
+
+            // Handle responsive text display
+            function handleResponsiveNav() {
+                const navSpans = document.querySelectorAll('.nav-links li a span');
+                if (window.innerWidth >= 1024) {
+                    navSpans.forEach(span => span.style.display = 'inline');
+                } else {
+                    navSpans.forEach(span => span.style.display = 'none');
+                }
+            }
+
+            // Initial call and event listener for resize
+            handleResponsiveNav();
+            window.addEventListener('resize', handleResponsiveNav);
+        });
+    </script>
 </body>
 </html>
