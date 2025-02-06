@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Anitketan Suin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Soria font import -->
+    <style>
+        @font-face {
+            font-family: 'Soria';
+            src: url('path-to-soria-font/Soria.woff2') format('woff2'),
+                 url('path-to-soria-font/Soria.woff') format('woff');
+        }
+        
+        :root {
+            --primary-color: #60a5fa;
+            --accent-color: #94A3B8;
+            --hover-color: #CBD5E1;
+            --text-primary: #FFFFFF;
+            --text-secondary: #CBD5E1;
+            --bg-card-hover: rgba(96, 165, 250, 0.05);
+            --link-color: #90EE90;
+        }
+        
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        h1 {
+            font-family: 'Soria', serif;
+            font-size: 2.3rem;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2.5rem;
+            letter-spacing: 1.5px;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            color: #60a5fa;
+            margin-bottom: 1.5rem;
+        }
+        
+        .content-section {
+            padding-top: 4rem;
+            text-align: center;
+        }
+        
+        .experience-card {
+            border: 1.5px solid var(--accent-color);
+            border-radius: 10px;
+            margin: 2rem auto;
+            padding: 2rem;
+            max-width: 90%;
+            text-align: left;
+            background-color: transparent;
+            transition: all 0.4s ease;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 25px rgba(96, 165, 250, 0.15);
+            background-color: var(--bg-card-hover);
+        }
+        
+        .experience-card h3 {
+            font-family: 'Soria', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            letter-spacing: 0.8px;
+        }
+        
+        .experience-card p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.9rem;
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.2px;
+        }
+        
+        .experience-card .date {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            font-style: italic;
+        }
+        
+        /* Style changes for links */
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .logo a {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+        }
+        
+        .social-links a {
+            color: var(--accent-color);
+            margin-right: 18px;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--link-color);
+        }
+        
+        /* Navigation links update */
+        .nav-links li a {
+            font-family: 'Poppins', sans-serif;
+            color: var(--link-color);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .nav-links li a i {
+            font-size: 0.9rem;
+        }
+        
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: var(--primary-color);
+        }
+        
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s;
+        }
+        
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links li a.active {
+            color: var(--primary-color);
+        }
+        
+        .nav-links li a.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">my Portfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="films.html"><i class="fas fa-film"></i> Films</a></li>
+                <li><a href="research.html" class="active"><i class="fas fa-flask"></i> Experience</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="papers.html"><i class="fas fa-scroll"></i> Papers</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Experience Content -->
+    <main class="content-section">
+        <h1>Experience</h1>
+        
+        <!-- IIT Delhi Experience -->
+        <div class="experience-card">
+            <h3>AI Research Intern at IIT Delhi (CSCCM Lab)</h3>
+            <p class="date">(Jan 2025 - Present)</p>
+            <p>Working on generative models to explore their potential in AI-driven content generation and their applications in various fields, including digital media and art.</p>
+        </div>
+
+        <!-- Jadavpur University Experience -->
+        <div class="experience-card">
+            <h3>AI Apprenticeship at Jadavpur University (EEG Classification)</h3>
+            <p class="date">(Nov 2024 - Jan 2025)</p>
+            <p>Worked on a group project to classify Electroencephalogram (EEG) signals using machine learning and deep learning techniques. A research paper is coming soon.</p>
+        </div>
+
+        <!-- IndieRise Experience -->
+        <div class="experience-card">
+            <h3>AI Engineering Team at IndieRise</h3>
+            <p class="date">(Mar 2024 - Present)</p>
+            <p>Contributing to the AI-driven projects at IndieRise, focusing on developing intelligent systems for automation and creative processes in filmmaking.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/anitketan-suin-07488b289/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AnitxD001" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/BrokeEngineer01" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_.anit._xd/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://leetcode.com/u/AnitxD/" target="_blank"><i class="fas fa-code"></i></a>
+                <a href="https://www.imdb.com/name/nm16487651/" target="_blank"><i class="fab fa-imdb"></i></a>
+                <a href="mailto:anitketans.pe.ug@jadavpuruniversity.in"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="company-info">
+                <p><a href="https://www.theindierise.com" target="_blank">IndieRise Digital LLP 🚀</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

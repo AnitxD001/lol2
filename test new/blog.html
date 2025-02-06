@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Anitketan Suin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #000000;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #111111;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo a {
+            font-family: 'Times New Roman', Times, serif;
+            color: #00e5ff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+        }
+
+        .nav-links li a {
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-links li a:hover {
+            color: #00e5ff;
+        }
+
+        .nav-links li a.active {
+            color: #00e5ff;
+        }
+
+        .nav-links li a i {
+            font-size: 0.9rem;
+        }
+
+        /* Content Styles */
+        .content-section {
+            background-color: #000000;
+            padding-top: 4rem;
+        }
+
+        .container {
+            margin-top: 80px;
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+            margin-bottom: 30px;
+            color: #00e5ff;
+            font-size: 2.5rem;
+        }
+
+        .coming-soon-section {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: #000000;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .coming-soon-content {
+            margin-top: 2rem;
+        }
+
+        .coming-soon-content i {
+            font-size: 4rem;
+            color: #00e5ff;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon-content h2 {
+            font-size: 2.5rem;
+            color: #00e5ff;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon-content p {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Links */
+        a {
+            color: #90EE90;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #7CCD7C;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #111111;
+            margin-top: 2rem;
+            padding: 2rem 0;
+        }
+
+        .social-links a {
+            color: #90EE90;
+            font-size: 1.6rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            margin-right: 20px;
+        }
+
+        .social-links a:hover {
+            color: #7CCD7C;
+            transform: translateY(-3px);
+        }
+
+        .company-info a {
+            color: #90EE90;
+        }
+
+        .company-info a:hover {
+            color: #7CCD7C;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">my Portfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="films.html"><i class="fas fa-film"></i> Films</a></li>
+                <li><a href="research.html"><i class="fas fa-flask"></i> Experience</a></li>
+                <li><a href="blog.html" class="active"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="papers.html"><i class="fas fa-scroll"></i> Papers</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blog Content -->
+    <main class="content-section">
+        <div class="container">
+            <div class="coming-soon-section">
+                <h1>Blog</h1>
+                <div class="coming-soon-content">
+                    <i class="fas fa-pencil-alt"></i>
+                    <h2>Coming Soon</h2>
+                    <p>(As soon as I figure out how to stop procrastinating... or find a magic wand)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/anitketan-suin-07488b289/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AnitxD001" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/BrokeEngineer01" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_.anit._xd/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://leetcode.com/u/AnitxD/" target="_blank"><i class="fas fa-code"></i></a>
+                <a href="https://www.imdb.com/name/nm16487651/" target="_blank"><i class="fab fa-imdb"></i></a>
+                <a href="mailto:anitketans.pe.ug@jadavpuruniversity.in"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="company-info">
+                <p><a href="https://www.theindierise.com" target="_blank">IndieRise Digital LLP 🚀</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

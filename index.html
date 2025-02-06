@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anitketan Suin - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            background-color: #000000;
+            color: #f5f5f5;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+
+        /* Navbar Styling */
+        nav {
+            background-color: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo a {
+            color: #00e5ff;
+            font-size: 1.8rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a i {
+            margin-right: 5px;
+        }
+
+        .nav-links a:hover {
+            color: #00e5ff;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #00e5ff, #2979ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #e0e0e0;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-section p {
+            font-size: 1.8rem;
+            color: #00e5ff;
+            font-weight: 500;
+            margin-bottom: 3rem;
+        }
+
+        .about-preview p {
+            font-size: 1.2rem;
+            color: #bdbdbd;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+        }
+
+        a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgba(17, 17, 17, 0.95);
+            padding: 20px 0;
+            color: #fff;
+        }
+
+        .social-links a {
+            color: #00e5ff;
+            font-size: 1.6rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #2979ff;
+            transform: translateY(-3px);
+        }
+
+        .company-info a {
+            color: #00e5ff;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .company-info a:hover {
+            color: #2979ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">My Portfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="films.html"><i class="fas fa-film"></i> Films</a></li>
+                <li><a href="research.html"><i class="fas fa-flask"></i> Experience</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="papers.html"><i class="fas fa-scroll"></i> Papers</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="hero-section">
+        <div class="container">
+            <h1>Anitketan Suin</h1>
+            <h2>Engineer | Filmmaker</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                Bridging the gap between AI and cinema
+            </p>
+            
+            <div class="about-preview">
+                <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    I am an undergraduate cinephile, I specialize in machine learning, 
+                    generative AI, and AI-powered filmmaking tools. With a background in power engineering, 
+                    computer science, and AI research, I'm passionate about revolutionizing the intersection 
+                    of AI and cinema.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links" style="text-align: center;">
+            <a href="https://www.linkedin.com/in/anitketan-suin-07488b289/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/AnitxD001" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://x.com/BrokeEngineer01" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/_.anit._xd/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://leetcode.com/u/AnitxD/" target="_blank"><i class="fas fa-code"></i></a>
+            <a href="https://www.imdb.com/name/nm16487651/" target="_blank"><i class="fab fa-imdb"></i></a>
+            <a href="mailto:anitketans.pe.ug@jadavpuruniversity.in"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="company-info" style="display: flex; justify-content: center; margin-top: 15px;">
+            <p><a href="https://www.theindierise.com" target="_blank">IndieRise Digital LLP 🚀</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

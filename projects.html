@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Anitketan Suin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #000000;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #111111;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo a {
+            font-family: 'Times New Roman', Times, serif;
+            color: #00e5ff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+        }
+
+        .nav-links li a {
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-links li a:hover {
+            color: #00e5ff;
+        }
+
+        .nav-links li a.active {
+            color: #00e5ff;
+        }
+
+        .nav-links li a i {
+            font-size: 0.9rem;
+        }
+
+        /* Content Styles */
+        .content-section {
+            background-color: #000000;
+            padding-top: 4rem;
+        }
+
+        .container {
+            margin-top: 80px;
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+            margin-bottom: 30px;
+            color: #00e5ff;
+            font-size: 2.5rem;
+        }
+
+        /* Project Cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .project-card {
+            background-color: #111111;
+            border-radius: 10px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h2 {
+            color: #00e5ff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background-color: #000000;
+            color: #00e5ff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+
+        .project-card p {
+            color: white;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            color: #90EE90;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #7CCD7C;
+        }
+
+        .project-link i {
+            margin-right: 0.5rem;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #111111;
+            margin-top: 2rem;
+            padding: 2rem 0;
+        }
+
+        .social-links a {
+            color: #90EE90;
+            font-size: 1.6rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            margin-right: 20px;
+        }
+
+        .social-links a:hover {
+            color: #7CCD7C;
+            transform: translateY(-3px);
+        }
+
+        .company-info a {
+            color: #90EE90;
+        }
+
+        .company-info a:hover {
+            color: #7CCD7C;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-code"></i> my Portfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html" class="active"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="films.html"><i class="fas fa-film"></i> Films</a></li>
+                <li><a href="research.html"><i class="fas fa-flask"></i> Experience</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="papers.html"><i class="fas fa-scroll"></i> Papers</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Content -->
+<main class="content-section">
+    <div class="container">
+        <h1>Projects</h1>
+        <div class="projects-grid">
+            <!-- EEG Classification -->
+            <div class="project-card">
+                <h2>EEG-Classification</h2>
+                <div class="project-tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Deep Learning</span>
+                </div>
+                <p>A research project at JU where we dive into the world of brainwaves, classifying Electroencephalogram (EEG) signals.🧠🍳</p>
+                <div class="project-links">
+                    <a href="https://github.com/AnitxD001/EEG-Classification" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Paper Coming Soon!</a>
+                </div>
+            </div>
+
+            <!-- Files System -->
+            <div class="project-card">
+                <h2>Files-System</h2>
+                <div class="project-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">File Management</span>
+                </div>
+                <p>A public C++ project for file management(dataset based on a library). IIT Guwahati Minor Project 1. 💾✨</p>
+                <div class="project-links">
+                    <a href="https://github.com/AnitxD001/Files-System" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
+            <!-- Coffee Alerter -->
+            <div class="project-card">
+                <h2>Coffee-Alerter</h2>
+                <div class="project-tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Webcam</span>
+                    <span class="tag">Real-time</span>
+                </div>
+                <p>This passion project of a little gem uses your webcam to track how much coffee you drink. Because let's face it – too much coffee means no more coding for the day. ☕️💻</p>
+                <div class="project-links">
+                    <a href="https://github.com/AnitxD001/Coffee-Alerter" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
+            <!-- Face Recognizer -->
+            <div class="project-card">
+                <h2>Face-Recognizer-using-OpenCV-Noob-build</h2>
+                <div class="project-tags">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">Face Detection</span>
+                </div>
+                <p>Introducing the "I can recognize you" system! pre trained face recognition project using OpenCV. It's like a bouncer for your computer(not really). 🚶‍♂️👨‍💻</p>
+                <div class="project-links">
+                    <a href="https://github.com/AnitxD001/Face-Recognizer-using-OpenCV-Noob-build-" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
+            <!-- CCU House Rent -->
+            <div class="project-card">
+                <h2>CCU-House-Rent</h2>
+                <div class="project-tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Data Science</span>
+                    <span class="tag">Kolkata</span>
+                </div>
+                <p>Predicting rent prices in Kolkata like a true economist. Using Random Forest to analyze all things housing – now you know what your landlord is up to. 🏠💸</p>
+                <div class="project-links">
+                    <a href="https://github.com/AnitxD001/CCU-House-Rent" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/anitketan-suin-07488b289/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AnitxD001" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/BrokeEngineer01" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_.anit._xd/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://leetcode.com/u/AnitxD/" target="_blank"><i class="fas fa-code"></i></a>
+                <a href="https://www.imdb.com/name/nm16487651/" target="_blank"><i class="fab fa-imdb"></i></a>
+                <a href="mailto:anitketans.pe.ug@jadavpuruniversity.in"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="company-info">
+                <p><a href="https://www.theindierise.com" target="_blank">IndieRise Digital LLP 🚀</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

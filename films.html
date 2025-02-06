@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films - Anitketan Suin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #000000;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #111111;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .logo a {
+            font-family: 'Times New Roman', Times, serif;
+            color: #00e5ff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+        }
+
+        .nav-links li a {
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-links li a:hover {
+            color: #00e5ff;
+        }
+
+        .nav-links li a.active {
+            color: #00e5ff;
+        }
+
+        .nav-links li a i {
+            font-size: 0.9rem;
+        }
+
+        /* Content Styles */
+        .content-section {
+            padding: 8rem 2rem 4rem 2rem;
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #000000;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            color: #00e5ff;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #00e5ff;
+            margin-bottom: 1.5rem;
+        }
+
+        .films-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .film-card {
+            background-color: #000000;
+            border-radius: 10px;
+            padding: 2rem;
+            width: 90%;
+            text-align: left;
+            box-shadow: 0 4px 15px rgba(0, 229, 255, 0.1);
+        }
+
+        .film-info h2 {
+            font-size: 2rem;
+            color: #00e5ff;
+            text-align: left;
+        }
+
+        .film-role {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        .film-description {
+            font-size: 1.1rem;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .film-meta {
+            font-size: 1rem;
+            color: white;
+            margin-top: 1rem;
+        }
+
+        .film-links a {
+            color: #90EE90;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .film-links a:hover {
+            color: #7CCD7C;
+        }
+
+        .upcoming-projects {
+            width: 90%;
+            padding: 2rem;
+            text-align: left;
+            background-color: #000000;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.5rem;
+            color: #00e5ff;
+        }
+
+        .timeline-item p {
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .timeline-date {
+            font-size: 1rem;
+            color: white;
+        }
+
+        .cinematography-resume {
+            width: 90%;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .cinematography-resume h3 {
+            font-size: 1.5rem;
+            color: #00e5ff;
+            margin-bottom: 1rem;
+        }
+
+        .resume-link {
+            color: #90EE90;
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resume-link:hover {
+            color: #7CCD7C;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #111111;
+            margin-top: 2rem;
+            padding: 2rem 0;
+        }
+
+        .social-links a {
+            color: #90EE90;
+            font-size: 1.6rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+            margin-right: 20px;
+        }
+
+        .social-links a:hover {
+            color: #7CCD7C;
+            transform: translateY(-3px);
+        }
+
+        .company-info a {
+            color: #90EE90;
+        }
+
+        .company-info a:hover {
+            color: #7CCD7C;
+        }
+
+        /* Mobile Optimization */
+        @media screen and (max-width: 768px) {
+            /* Navigation adjustments */
+            .nav-content {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links li {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .nav-links li a {
+                justify-content: center;
+            }
+
+            /* Content adjustments */
+            .content-section {
+                padding: 6rem 1rem 2rem 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .film-card {
+                width: 100%;
+                padding: 1.5rem;
+            }
+
+            .film-info h2 {
+                font-size: 1.8rem;
+            }
+
+            .film-role {
+                font-size: 1.1rem;
+            }
+
+            .film-description {
+                font-size: 1rem;
+            }
+
+            .film-meta {
+                font-size: 0.9rem;
+            }
+
+            .film-links a {
+                font-size: 1.1rem;
+            }
+
+            /* Footer adjustments */
+            .social-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .social-links a {
+                margin: 0;
+                font-size: 1.4rem;
+            }
+
+            .company-info {
+                text-align: center;
+                margin-top: 1rem;
+            }
+        }
+
+        /* Small mobile devices */
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .film-info h2 {
+                font-size: 1.5rem;
+            }
+
+            .film-role {
+                font-size: 1rem;
+            }
+
+            .film-description {
+                font-size: 0.95rem;
+            }
+
+            .film-card {
+                padding: 1rem;
+            }
+
+            .social-links a {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Ensure smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Better touch targets for mobile */
+        .nav-links li a,
+        .film-links a,
+        .social-links a {
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">
+                <a href="index.html">my Portfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="projects.html"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="films.html" class="active"><i class="fas fa-film"></i> Films</a></li>
+                <li><a href="research.html"><i class="fas fa-flask"></i> Experience</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="papers.html"><i class="fas fa-scroll"></i> Papers</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Films Content -->
+    <main class="content-section">
+        <h1>Films</h1>
+        <div class="films-grid">
+            <!-- Dispersion -->
+            <div class="film-card">
+                <div class="film-info">
+                    <h2>Dispersion</h2>
+                    <p class="film-role">Executive Producer | AI Producer | Cinematographer | Animator</p>
+                    <p class="film-description">Nikhil, a violinist who just got into a corporate internship, grapples with his trauma when he discovers a diary left by a mysterious professor in his new apartment. This diary reveals deep connections and mysteries of the house and the book.</p>
+                    <div class="film-meta">
+                        <span><i class="far fa-clock"></i> 2h 11m</span>
+                        <span><i class="far fa-calendar"></i> 2024</span>
+                    </div>
+                    <div class="film-links">
+                        <a href="https://www.imdb.com/title/tt33312082/" class="imdb-link"><i class="fab fa-imdb"></i> IMDb</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Projects -->
+            <div class="upcoming-projects">
+                <h2>Upcoming Projects</h2>
+                
+                <div class="timeline-item">
+                    <h3>More Films Coming Soon!</h3>
+                    <p>There are many more exciting films in the pipeline. Stay tuned for more updates!</p>
+                </div>
+            </div>
+
+            <!-- Cinematography Resume -->
+            <div class="cinematography-resume">
+                <h3>My Cinematography Resume</h3>
+                <a href="https://drive.google.com/file/d/13ectTkfN9c4D8iWzs_chLo99roqhsNTy/view?usp=sharing" class="resume-link" target="_blank">View Cinematography Resume</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/anitketan-suin-07488b289/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/AnitxD001" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/BrokeEngineer01" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_.anit._xd/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://leetcode.com/u/AnitxD/" target="_blank"><i class="fas fa-code"></i></a>
+                <a href="https://www.imdb.com/name/nm16487651/" target="_blank"><i class="fab fa-imdb"></i></a>
+                <a href="mailto:anitketans.pe.ug@jadavpuruniversity.in"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="company-info">
+                <p><a href="https://www.theindierise.com" target="_blank">IndieRise Digital LLP 🚀</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
